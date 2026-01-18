@@ -24,7 +24,7 @@
   </head>
   <!--#endregion-->
   <body class="page_body">
-    <header class="header">
+    <header class="header" id="header">
       <div class="top-bar top-bar--header">
         <div class="header__logo">
           <a href="#" class="logo logo--N"></a>
@@ -32,7 +32,11 @@
 
         <div class="top-bar__icons">
           <a href="#" class="icon icon--phone-call"></a>
-          <a href="#menu" class="icon icon--burger-menu"></a>
+
+          <a href="#menu" id="burger"
+          class="icon icon--burger-menu"></a>
+
+
         </div>
       </div>
       <div class="header_bottom">
@@ -203,11 +207,14 @@
 
         <form class="footer__form">
           <input type="text" name="name"
-          placeholder="Name" class="footer__input">
+          placeholder="Name" class="footer__input"
+          autocomplete="name">
           <input type="email" name="email"
-          placeholder="Email" class="footer__input">
+          placeholder="Email" class="footer__input"
+          autocomplete="email">
           <textarea name="message"
-          placeholder="Message" class="footer__textarea"></textarea>
+          placeholder="Message" class="footer__textarea"
+          autocomplete="off"></textarea>
           <button type="submit" class="footer__button">SEND</button>
         </form>
 

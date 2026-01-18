@@ -22,16 +22,13 @@
   }
 
   &__container {
-
     padding: 0 20px 64px;
 
     /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
   }
-
 
   &__title {
     font-size: 32px;
@@ -40,7 +37,7 @@
     align-items: flex-start;
   }
 
-    &__text {
+  &__text {
     font-weight: 400;
     margin: 0 auto 10px;
     font-size: 16px;
@@ -77,9 +74,6 @@
 
   &__button {
     padding: 12px 24px;
-
-    /* width: 280px;
-    height: 56px; */
     font-size: 16px;
     font-weight: 700;
     background-color: #fff;
@@ -90,12 +84,12 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #333;
+      background-color: transparent;
     }
   }
 
   &__contacts {
-    gap:24px;
+    gap: 24px;
     font-size: 14px;
     line-height: 1.4;
   }
@@ -104,4 +98,3 @@
     margin: 5px 0;
   }
 }
-

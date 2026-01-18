@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   box-sizing: border-box;
   height: 100vh;
   background-image: url(../images/image-faes.png);
@@ -8,16 +9,25 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  transition: transform 0.3s ease;
+  z-index: 1000;
+
 }
+
+/* .header--shift {
+   transform: translateX(100%);
+ } */
 
 .header__title {
   margin: 0;
-  font-family: Space Grotesk;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-style: Bold;
   font-size: 36px;
   line-height: 140%;
 }
+
 .header_bottom {
   padding: 0 20px 40px;
 }

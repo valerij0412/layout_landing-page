@@ -19,7 +19,7 @@
   background-color: #fff;
   padding: 24px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
   &__title {
     font-size: 20px;
@@ -28,12 +28,12 @@
   }
 
   &__image {
-  display: block;
-  border-radius: 8px;
+    display: block;
+    border-radius: 8px;
 
-  &--large {
-    max-width: 400px;
-   }
+    &--large {
+      max-width: 400px;
+    }
   }
 
   &__description {
@@ -84,21 +84,20 @@
     display: block;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 
-  &__image {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    order: 1;
+    &__image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      order: 1;
 
-    &--small {
-    max-width: 200px;
+      &--small {
+        max-width: 200px;
+      }
     }
-  }
-
 
     &:hover {
       transform: scale(1.03);
