@@ -29,7 +29,6 @@
   text-decoration: none;
 }
 
-
 .nav__link {
   position: relative;
   display: inline-block;
@@ -43,7 +42,7 @@
 }
 
 .nav__link::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -54,12 +53,13 @@
 }
 
 .nav__link:hover {
-  color: #ff5500;
+  color: #f50;
 }
 
 .nav__link:hover::after {
   width: 100%;
 }
+
 .nav__list {
   margin-top: 32px;
   padding: 0;

@@ -9,7 +9,7 @@
 
   transform: translateX(-100%); // приховано за межами екрана
   transition: transform 0.3s ease;
-  z-index: 2000;      // нижче за головний контент
+  z-index: 2000; // нижче за головний контент
 }
 
 .page__menu--active {
@@ -17,7 +17,7 @@
   pointer-events: auto;
 }
 
- /*.page_menu:target {
+ /* .page_menu:target {
   opacity: 1;
   pointer-events: all;
 } */
