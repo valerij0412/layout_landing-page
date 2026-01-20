@@ -1,5 +1,21 @@
 'use strict';
 
+const phoneIcon = document.querySelector('.icon--phone-call');
+
+if (phoneIcon) {
+  phoneIcon.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    // додаємо клас активності (збільшення)
+    phoneIcon.classList.add('icon--phone-call--active');
+
+    // через 3 секунди прибираємо клас
+    setTimeout(() => {
+      phoneIcon.classList.remove('icon--phone-call--active');
+    }, 3000);
+  });
+}
+
 const burger = document.getElementById('burger');
 const menu = document.getElementById('menu');
 

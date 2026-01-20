@@ -21,6 +21,12 @@
   background-image: url(../images/icon-phone-call.svg);
 }
 
+.icon--phone-call--active {
+  transform: scale(1.2);
+  color: #04836a;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
 .icon--burger-menu {
   background-image: url(../images/icon-burger-menu.svg);
 }
