@@ -1,10 +1,15 @@
+
+
 .header {
   position: relative;
+
   box-sizing: border-box;
+
   height: 100vh;
   background-image: url(../images/image-faes.png);
   background-size: cover;
   background-position: center;
+
 
   display: flex;
   flex-direction: column;
@@ -12,22 +17,19 @@
 
   transition: transform 0.3s ease;
   z-index: 1000;
-}
 
-/* .header--shift {
-   transform: translateX(100%);
- } */
+
 
 .header__title {
   margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $font-main;
   font-weight: 700;
   font-style: Bold;
-  font-size: 36px;
+  font-size: $font-size-heading;
   line-height: 140%;
 }
 
-.header_bottom {
+.header__bottom {
   padding: 0 20px 40px;
 }
 
@@ -42,7 +44,7 @@
 }
 
 .top-bar--header {
-  padding: 20px 24px;
+  padding: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,10 +59,11 @@
   box-sizing: border-box;
   padding: 20px 24px;
   height: 100vh;
-  background-color: rgba(229, 230, 232, 1);
+  background-color: $color-light;
   font-weight: 700;
 }
 
 .menu__top {
   margin-bottom: 32px;
+ }
 }

@@ -18,16 +18,36 @@ if (phoneIcon) {
 
 const burger = document.getElementById('burger');
 const menu = document.getElementById('menu');
+const closeIcon = document.querySelector('.icon--close'); // Додано
 
 burger.addEventListener('click', (event) => {
   event.preventDefault();
-  menu.classList.toggle('page__menu--active');
-  burger.classList.toggle('icon--close');
-  burger.classList.toggle('icon--burger-menu');
+
+  const isActive = menu.classList.toggle('page__menu--active');
+
+  if (isActive) {
+    burger.classList.remove('icon--burger-menu', 'icon-burger-menu-hover');
+    burger.classList.add('icon--close');
+    document.body.style.overflow = 'hidden';
+  } else {
+    burger.classList.remove('icon--close', 'icon-burger-menu-hover');
+    burger.classList.add('icon--burger-menu');
+    document.body.style.overflow = '';
+  }
+});
+
+// Додано: клік по хрестику всередині меню
+closeIcon.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  menu.classList.remove('page__menu--active');
+  burger.classList.remove('icon--close');
+  burger.classList.add('icon--burger-menu');
+  document.body.style.overflow = '';
 });
 
 document.querySelector('.browse__button').addEventListener('click', () => {
-  document.querySelector('.categories').style.display = 'block';
+  document.querySelector('.categoris').style.display = 'block';
 });
 
 const footerForm = document.querySelector('.footer__form');
@@ -46,7 +66,7 @@ if (footerForm) {
     submitBtn.blur();
 
     // 3. Міняємо текст на кнопці
-    submitBtn.textContent = 'Ваше повідомлення відправлено!';
+    submitBtn.textContent = 'Your message has been sent!';
 
     // Блокуємо кнопку, щоб користувач не натискав багато разів під час паузи
     submitBtn.disabled = true;
@@ -58,3 +78,33 @@ if (footerForm) {
     }, 3000);
   });
 }
+
+const navLinks = document.querySelectorAll('.nav__link');
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    const targetId = link.getAttribute('href');
+
+    if (targetId.startsWith('#')) {
+      e.preventDefault();
+
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        // Закриваємо меню
+        if (menu) {
+          menu.classList.remove('page__menu--active');
+        }
+        document.body.style.overflow = 'auto';
+
+        // Плавна прокрутка через scrollTo
+        const topOffset = targetElement.offsetTop;
+
+        window.scrollTo({
+          top: topOffset,
+          behavior: 'smooth',
+        });
+      }
+    }
+  });
+});
