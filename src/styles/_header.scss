@@ -26,11 +26,23 @@
   font-weight: 700;
   font-style: Bold;
   font-size: $font-size-heading;
-  line-height: 140%;
+  line-height: 100%;
 }
 
 .header__bottom {
-  padding: 0 20px 40px;
+  padding: 0 20px 20px;
+
+  @include onTablet {
+  padding: 0 72px 20px;
+
+}
+
+@include onDesktop {
+
+  padding: 0 120px 30px;
+
+ }
+
 }
 
 .logo--N {
@@ -41,18 +53,28 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  position: relative;
+  z-index: 3000;
 }
 
 .top-bar--header {
-  padding: 20px 20px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+@include onTablet {
+  padding: 36px 72px;
+
 }
 
-.top-bar__icons {
-  display: flex;
-  gap: 24px;
+@include onDesktop {
+
+  padding: 36px 120px;
+
+ }
+
 }
 
 .top-bar--menu {
@@ -61,6 +83,17 @@
   height: 100vh;
   background-color: $color-light;
   font-weight: 700;
+
+@include onTablet {
+  padding: 36px 72px;
+
+}
+
+@include onDesktop {
+
+  padding: 36px 120px;
+
+ }
 }
 
 .menu__top {

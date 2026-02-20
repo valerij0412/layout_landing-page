@@ -37,6 +37,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include onTablet {
+  padding: 16px 50px;
+
+}
+
+@include onDesktop {
+
+  padding: 17px 98px;
+
+ }
+
+.logo--N {
+  display: block;
+  background-image: url(../images/logo-N.svg);
+  height: 16px;
+  width: 125px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+  z-index: 3000;
+}
+
 }
 
 .menu__phone-namber {
@@ -46,16 +71,40 @@
   line-height: 27px;
   color: inherit;
   text-decoration: none;
+
+@include onTablet {
+  padding: 0 50px;
+
+}
+
+@include onDesktop {
+
+  padding: 0 100px;
+
+ }
 }
 
 .menu__call-to-order {
-  display: block;
+  display: inline-block;
   padding-bottom: 7px;
-  border-bottom: 1px solid rgba(41, 41, 41, 1);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
   width: fit-content;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 2px;
   color: inherit;
   text-decoration: none;
+
+@include onTablet {
+  margin: 0 50px;
+
+}
+
+@include onDesktop {
+
+  margin: 0 100px;
+  width: fit-content;
+ }
 }
