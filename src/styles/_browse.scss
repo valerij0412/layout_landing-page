@@ -49,6 +49,7 @@
 
 @include onDesktop {
     --columns: 12;
+
     column-gap: 24px;
     grid-template-columns: repeat(var(--columns), 1fr);
 
@@ -124,6 +125,7 @@
 
 .browse__button {
   --columns: 2;
+
   gap: 20px;
   grid-template-columns: repeat(var(--columns), 1fr);
 
@@ -154,7 +156,6 @@
 
 
     @include onDesktop {
-
     grid-column: span 4;
   }
 

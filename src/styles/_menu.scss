@@ -44,7 +44,6 @@
 }
 
 @include onDesktop {
-
   padding: 17px 98px;
 
  }
@@ -78,7 +77,6 @@
 }
 
 @include onDesktop {
-
   padding: 0 100px;
 
  }
@@ -87,7 +85,7 @@
 .menu__call-to-order {
   display: inline-block;
   padding-bottom: 7px;
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
   width: fit-content;
@@ -95,7 +93,7 @@
   line-height: 16px;
   letter-spacing: 2px;
   color: inherit;
-  text-decoration: none;
+
 
 @include onTablet {
   margin: 0 50px;
@@ -103,7 +101,6 @@
 }
 
 @include onDesktop {
-
   margin: 0 100px;
   width: fit-content;
  }

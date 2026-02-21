@@ -46,10 +46,6 @@ closeIcon.addEventListener('click', (event) => {
   document.body.style.overflow = '';
 });
 
-document.querySelector('.browse__button').addEventListener('click', () => {
-  document.querySelector('.categoris').style.display = 'block';
-});
-
 const footerForm = document.querySelector('.footer__form');
 
 if (footerForm) {
