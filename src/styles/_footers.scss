@@ -79,6 +79,7 @@
   }
 
   &__text {
+    font-family: $font-mono;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.4;
@@ -87,10 +88,10 @@
   &__form {
     display: grid;
     row-gap: 16px;
-    grid-column: 1 / -1; // Додано для коректного позиціонування форми в контейнері
+    grid-column: 1 / -1;
 
     @include onDesktop {
-      display: contents; // Тільки тут форма "розчиняється" для 12 колонок
+      display: contents;
     }
   }
 
@@ -112,10 +113,11 @@
 
   &__input,
   &__textarea {
+    font-family: $font-mono;
     gap: 16px;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: none;
+    border-radius: 8px;
     font-size: 14px;
     grid-column: 1 / -1;
     background-color: $color-input;
@@ -208,6 +210,9 @@
 
   }
 
+.footer__link {
+    font-family: $font-mono;
+  }
 .footer__input:-webkit-autofill,
 .footer__textarea:-webkit-autofill {
     box-shadow: 0 0 0 1000px $color-input inset !important;

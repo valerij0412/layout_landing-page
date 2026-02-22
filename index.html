@@ -12,7 +12,7 @@
     <link rel="preconnect"
           href="https://fonts.gstatic.com"
           crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="/src/styles/index.scss"
@@ -221,12 +221,13 @@
 
           <input type="text" name="no-autocomplete-name"
           placeholder="Name" class="footer__input"
-           autocomplete="new-name">
+           autocomplete="new-name" required>
           <input type="email" name="no-autocomplete-email"
           placeholder="Email" class="footer__input"
-          autocomplete="new-password">
+          autocomplete="new-password" required>
           <textarea name="message"
-          placeholder="Message" class="footer__textarea"></textarea>
+          placeholder="Message" class="footer__textarea"
+          required></textarea>
           <button type="submit" class="footer__button">Send</button>
         </form>
 
